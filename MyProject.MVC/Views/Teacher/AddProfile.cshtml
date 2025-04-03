@@ -1,0 +1,30 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Teacher.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h2 class="mb-0">Add Teacher Profile</h2>
+                </div>
+                <div class="card-body">
+                    <div id="teacherProfileForm" class="teacher-form"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Loading overlay for form submission -->
+<div id="loadingOverlay" class="loading-overlay d-none">
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/teacher/AddProfile.css" asp-append-version="true" />
+    <script src="~/js/teacher/AddProfile.js" asp-append-version="true"></script>
+}

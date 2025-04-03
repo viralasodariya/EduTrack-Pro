@@ -1,0 +1,125 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Student.cshtml";
+    ViewData["Title"] = "Student Profile";
+}
+
+<div class="container py-5">
+    <div class="row mb-4">
+        <div class="col-12 d-flex justify-content-between align-items-center">
+            <h2 class="profile-title">My Profile</h2>
+            <div>
+                <a href="/student/EditProfile" class="btn btn-primary"><i class="fas fa-edit me-2"></i>Edit Profile</a>
+                <a href="/student" class="btn btn-outline-secondary ms-2"><i class="fas fa-arrow-left me-2"></i>Back</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Profile Sidebar -->
+        <div class="col-lg-4 mb-4">
+            <div class="card profile-card shadow-sm">
+                <div class="card-body text-center">
+                    <div class="profile-picture-container mb-3">
+                        <img id="profilePicture" src="" alt="Profile Picture" class="profile-picture">
+                    </div>
+                    <h3 id="studentName" class="mb-1">Loading...</h3>
+                    <span class="badge bg-primary mb-3" id="status">Loading...</span>
+                    <p class="text-muted mb-3" id="studentClass">Loading...</p>
+
+                    <div class="profile-info">
+                        <div class="profile-info-item">
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span id="email">Loading...</span>
+                        </div>
+                        <div class="profile-info-item">
+                            <i class="fas fa-calendar text-primary"></i>
+                            <span id="enrollmentDate">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Content -->
+        <div class="col-lg-8">
+            <div class="card shadow-sm">
+                <div class="card-body p-0">
+                    <!-- Simple tab system that works without Bootstrap JS dependencies -->
+                    <div class="custom-tabs mb-3">
+                        <div class="tab-header">
+                            <div class="tab active" data-tab="personal">
+                                <i class="fas fa-user me-2"></i>Personal
+                            </div>
+                            <div class="tab" data-tab="parents">
+                                <i class="fas fa-users me-2"></i>Parents
+                            </div>
+                        </div>
+
+                        <div class="tab-content p-4">
+                            <!-- Personal Tab -->
+                            <div id="personal" class="tab-panel active">
+                                <h4 class="mb-4"><i class="fas fa-user-circle me-2"></i>Personal Information</h4>
+
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="info-group">
+                                            <label><i class="fas fa-id-card me-2"></i>Full Name</label>
+                                            <p id="fullName">Loading...</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="info-group">
+                                            <label><i class="fas fa-venus-mars me-2"></i>Gender</label>
+                                            <p id="gender">Loading...</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="info-group">
+                                            <label><i class="fas fa-birthday-cake me-2"></i>Date of Birth</label>
+                                            <p id="dob">Loading...</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="info-group">
+                                            <label><i class="fas fa-envelope me-2"></i>Email Address</label>
+                                            <p id="emails">Loading...</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="info-group">
+                                            <label>Enrollment Date</label>
+                                            <p id="enrollmentDate2">Loading...</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="info-group">
+                                            <label>Account Created</label>
+                                            <p id="createdAt">Loading...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Parents Tab -->
+                            <div id="parents" class="tab-panel">
+                                <h4 class="mb-4">Parent Information</h4>
+                                <div id="guardiansList" class="guardians-container">
+                                    <div class="text-center py-4">
+                                        <div class="spinner-border text-primary" role="status">
+                                            <span class="visually-hidden">Loading...</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/student/Profile.css" asp-append-version="true" />
+    <script src="~/js/student/Profile.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,127 @@
+/* Main Form Styling */
+.teacher-form {
+    padding: 20px 0;
+}
+
+
+
+.teacher-form .k-form-field {
+    margin-bottom: 20px;
+}
+
+.teacher-form .k-form-field > .k-label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.teacher-form .k-textbox,
+.teacher-form .k-dropdown,
+.teacher-form .k-datepicker,
+.teacher-form .k-numerictextbox {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease-in-out;
+}
+
+.teacher-form .k-textbox:focus,
+.teacher-form .k-dropdown:focus,
+.teacher-form .k-datepicker:focus,
+.teacher-form .k-numerictextbox:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Button Styling */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.btn-submit, 
+.btn-cancel {
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-submit {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-submit:hover {
+    background-color: #0069d9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cancel {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background-color: #5a6268;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Card styling */
+.card {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: #3498db;
+    padding: 15px 20px;
+}
+
+.card-header h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Loading overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn-submit, .btn-cancel {
+        width: 100%;
+    }
+    
+    .teacher-form .k-form {
+        grid-template-columns: 1fr !important;
+    }
+}

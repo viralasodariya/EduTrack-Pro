@@ -1,0 +1,26 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Student.cshtml";
+    ViewData["Title"] = "Student Materials";
+}
+
+<div class="container-fluid student-materials-page">
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header  text-white">
+                    <h2 class="mb-0"><i class="fas fa-book-open me-2"></i>Student Materials</h2>
+                </div>
+                <div class="card-body">
+                    <div class="materials-container">
+                        <div id="materialsGrid" class="mt-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/student/StudentMaterial.css" asp-append-version="true" />
+    <script src="~/js/student/StudentMaterial.js" asp-append-version="true"></script>
+}

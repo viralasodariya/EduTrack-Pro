@@ -1,0 +1,44 @@
+.admin-page-title {
+    color: #333;
+    font-size: 1.75rem;
+    margin-bottom: 0;
+}
+
+.admin-card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 8px;
+}
+
+#grid {
+    min-height: 400px;
+}
+
+#btnadd {
+    padding: 8px 16px;
+    font-weight: 500;
+}
+
+#btnadd i {
+    margin-right: 5px;
+}
+
+#myKModal, #editStudent {
+    padding: 20px;
+}
+
+.k-form {
+    margin: 0;
+    padding: 15px;
+}
+
+.k-grid {
+    border-radius: 8px;
+}
+
+.k-grid-header {
+    background-color: #f8f9fa;
+}
+
+/* No sidebar style overrides to ensure consistency with admin-styles.css */
+

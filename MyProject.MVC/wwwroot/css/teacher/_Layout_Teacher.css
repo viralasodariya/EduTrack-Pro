@@ -1,0 +1,257 @@
+:root {
+    --primary: #4e73df;
+    --primary-light: #6f8ef7;
+    --secondary: #5a6268;
+    --success: #2dce89;
+    --info: #17a2b8;
+    --warning: #ffbe0b;
+    --danger: #f5365c;
+    --light: #f9fbfd;
+    --dark: #3a3b45;
+    --shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+    --border-radius: 0.35rem;
+}
+
+.container-fluid {
+    padding: 15px;
+}
+
+body {
+    background-color: #f8f9fc;
+    font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    padding-top: 4.5rem; /* Add padding to account for fixed navbar */
+}
+
+
+
+
+/* Navbar Styling */
+.navbar {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 600;
+    transition: all 0.2s;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+}
+
+.nav-link:hover {
+    color: var(--light) !important;
+    transform: translateY(-2px);
+}
+
+.nav-link:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--light);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover:after {
+    width: 80%;
+    left: 10%;
+}
+
+
+
+
+/* Fixed navbar styles */
+.fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.content-container {
+    padding-top: 2rem;
+    min-height: 70vh;
+}
+
+/* Responsive navigation adjustments */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: var(--primary);
+        padding: 1rem;
+        border-radius: var(--border-radius);
+        margin-top: 0.5rem;
+        box-shadow: var(--shadow);
+    }
+    
+    .dropdown-menu {
+        background-color: rgba(255, 255, 255, 0.1);
+        border: none;
+    }
+    
+    .dropdown-item {
+        color: white;
+    }
+    
+    .dropdown-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .navbar-nav .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
+}
+
+
+/* Active link styling */
+.nav-link.active {
+    transform: translateY(-2px);
+    border-bottom: 2px solid var(--light);
+}
+
+/* Dashboard Cards */
+.teacher-dashboard {
+    background-color: var(--primary);
+    color: white;
+    box-shadow: var(--shadow);   
+}
+
+.dashboard-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.dashboard-card h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-card p {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 0;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+footer {
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-card {
+        margin-bottom: 1rem;
+    }
+    
+    .teacher-dashboard {
+        padding: 1rem 0;
+    }
+    
+    .card-icon {
+        font-size: 2rem;
+    }
+    
+    .dashboard-card h3 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Custom dropdown styling */
+.dropdown-menu {
+    border: none;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+}
+
+.dropdown-item {
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-light);
+    color: white;
+}
+
+/* Buttons and form elements */
+.btn {
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    padding: 0.5rem 1.25rem;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-light);
+    border-color: var(--primary-light);
+    box-shadow: 0 5px 15px rgba(78, 115, 223, 0.4);
+}
+
+/* Table styling */
+.table {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.table thead th {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    font-weight: 600;
+}

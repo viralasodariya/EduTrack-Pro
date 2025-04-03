@@ -1,0 +1,82 @@
+/* Card styling */
+.profile-card {
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.profile-card .card-header {
+    border-radius: 8px 8px 0 0;
+}
+
+/* Form styling */
+.teacher-form .k-form {
+    width: 100%;
+}
+
+.teacher-form .k-form .k-form-field {
+    margin-bottom: 1.5rem;
+}
+
+.teacher-form .k-form .k-label {
+    font-weight: 500;
+    color: #495057;
+}
+
+.teacher-form .k-form input,
+.teacher-form .k-form .k-widget {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+/* Button styling */
+.teacher-form .k-button {
+    margin-right: 10px;
+    margin-top: 15px;
+    padding: 8px 25px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.2s ease-in-out;
+}
+
+.teacher-form .k-button.k-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.teacher-form .k-button.k-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.teacher-form .k-button.k-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: white;
+}
+
+.teacher-form .k-button.k-secondary:hover {
+    background-color: #5c636a;
+    border-color: #565e64;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .teacher-form .k-form-field {
+        flex-direction: column;
+    }
+    
+    .teacher-form .k-label {
+        margin-bottom: 6px;
+    }
+    
+    .teacher-form .k-form-field-wrap {
+        width: 100%;
+    }
+    
+    .teacher-form .k-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

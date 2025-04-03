@@ -1,0 +1,80 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Student.cshtml";
+    ViewData["Title"] = "Student Materials";
+}
+
+<div class="timetable-container">
+    <div class="timetable-header">
+        <h2 class="text-center">Class Timetable</h2>
+        <div class="timetable-controls">
+            <div class="week-selector">
+                <label for="weekSelect">Current Week:</label>
+                <select id="weekSelect" class="form-select">
+                    <option value="current" selected>Current Week</option>
+                    <option value="next">Next Week</option>
+                </select>
+            </div>
+            <div class="view-options">
+                <button id="printButton" class="btn btn-outline-secondary">
+                    <i class="fas fa-print"></i> Print
+                </button>
+                <button id="downloadButton" class="btn btn-outline-primary">
+                    <i class="fas fa-download"></i> Download PDF
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div id="loadingSpinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="responsive-table">
+        <table class="table table-bordered text-center" id="timeTable">
+            <thead class="table-dark">
+                <tr>
+                    <th>Time Slot</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Timetable data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <div class="legend mt-4">
+        <div class="legend-item">
+            <div class="legend-color subject-math"></div>
+            <div>Mathematics</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color subject-science"></div>
+            <div>Science</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color subject-english"></div>
+            <div>Languages</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color subject-history"></div>
+            <div>Social Studies</div>
+        </div>
+        <div class="legend-item">
+            <div class="legend-color subject-computer"></div>
+            <div>Computer</div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/student/TimeTable.css" asp-append-version="true" />
+    <script src="~/js/student/TimeTable.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+}

@@ -1,0 +1,65 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Teacher.cshtml";
+    ViewData["Title"] = "Teaching Materials";
+}
+
+
+
+<div class="materials-container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0"><i class="fas fa-file-upload me-2"></i>Upload Teaching Materials</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group mb-3">
+                                <label for="subjectDropdown" class="form-label fw-bold">Select Subject:</label>
+                                <select id="subjectDropdown" class="form-select"></select>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group mb-3">
+                                <label class="form-label fw-bold">Upload File:</label>
+                                <div class="custom-file-upload">
+                                    <input type="file" id="fileUpload" class="form-control" />
+                                    <small class="text-muted file-info">No file selected</small>
+                                    <div class="upload-time mt-2 d-none">
+                                        <span class="text-muted">Ready to upload: </span>
+                                        <span class="current-time"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                        <button class="btn btn-primary" id="uploadBtn">
+                            <i class="fas fa-cloud-upload-alt me-2"></i>Upload Material
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header bg-info text-white">
+                    <h4 class="mb-0"><i class="fas fa-folder-open me-2"></i>My Teaching Materials</h4>
+                </div>
+                <div class="card-body">
+                    <div id="fileManager" class="materials-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div id="notification"></div>
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="~/css/teacher/Materials.css" asp-append-version="true" />
+    <script src="~/js/teacher/Materials.js" asp-append-version="true"></script>
+}

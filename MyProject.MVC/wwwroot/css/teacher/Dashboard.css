@@ -1,0 +1,232 @@
+/* Dashboard Styles */
+
+
+/* Stats Cards */
+.card.border-left-primary,
+.card.border-left-success,
+.card.border-left-warning,
+.card.border-left-info {
+    border-left: 0.25rem solid;
+    transition: transform 0.3s ease;
+}
+
+.card.border-left-primary {
+    border-left-color: #4e73df;
+}
+
+.card.border-left-success {
+    border-left-color: #1cc88a;
+}
+
+.card.border-left-warning {
+    border-left-color: #f6c23e;
+}
+
+.card.border-left-info {
+    border-left-color: #36b9cc;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Teacher Profile Card */
+#teacherProfileCard {
+    border-radius: 10px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    margin: 20px auto;
+    width: 100% !important;
+    max-width: 350px;
+    background: linear-gradient(to bottom, #ffffff, #f8f9fc);
+    border-top: 3px solid #4e73df;
+}
+
+#teacherProfileCard .card-body {
+    padding: 1.5rem;
+}
+
+#teacherProfileCard .card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #5a5c69;
+    margin-bottom: 1rem;
+}
+
+#teacherProfileCard .card-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+#teacherProfileCard .card-text {
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+}
+
+#teacherProfileCard .btn-primary {
+    margin-top: 1rem;
+    width: 100%;
+    font-weight: 600;
+}
+
+/* Tables */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table thead th {
+    background-color: #f8f9fc;
+    border-bottom: 2px solid #e3e6f0;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #4e73df;
+}
+
+.table tbody tr:hover {
+    background-color: rgba(78, 115, 223, 0.05);
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: #e3e6f0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #4e73df;
+}
+
+.timeline-item .date {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: #4e73df;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.timeline-item p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* Dashboard Card Layout */
+.dashboard-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.col-profile {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (min-width: 992px) {
+    .dashboard-row {
+        flex-wrap: nowrap;
+    }
+    
+    .col-profile {
+        width: 30%;
+        margin-right: 2%;
+    }
+    
+    .col-classes {
+        width: 68%;
+    }
+}
+
+/* Teacher Progress Chart Styles */
+.progress-chart-container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.progress-chart-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.progress-chart-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #5a5c69;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#teacherProgressChart {
+    height: 350px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* KendoUI Chart Customizations */
+.k-chart .k-series .k-bar {
+    border-radius: 4px;
+}
+
+.k-chart .k-title {
+    font-weight: 600;
+    font-family: inherit;
+}
+
+.k-chart .k-label {
+    font-size: 0.85rem;
+}
+
+/* Chart Responsiveness */
+@media (max-width: 768px) {
+    #teacherProgressChart {
+        height: 300px;
+    }
+    
+    .k-chart .k-label {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #teacherProgressChart {
+        height: 250px;
+    }
+}

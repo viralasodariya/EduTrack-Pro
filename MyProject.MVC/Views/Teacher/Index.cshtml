@@ -1,0 +1,178 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Teacher.cshtml";
+}
+
+<div class="container-fluid mt-4">
+    <!-- card -->
+    <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Students</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="studentCount"></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-users fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Subject</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="subjectCount"></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-book fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Assignments</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="assignmentCount"></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Class Teacher</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800" id="className"></div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-chalkboard-teacher fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dashboard-row">
+
+        <div class="col-profile">
+            <div id="teacherProfileCard" class="card shadow-sm">
+            <div class="card-body text-center">
+                <div class="profile-header mb-4">
+                <div class="profile-avatar" style="width: 120px; height: 120px; margin: 0 auto; overflow: hidden; border: 3px solid #4e73df; border-radius: 50%;">
+                    <img src="" id="teacherImage" class="img-fluid rounded-circle" alt="Teacher Image" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h5 id="teacherName" class="card-title mt-3 mb-1 font-weight-bold"></h5>
+                <h6 class="card-subtitle text-muted">Teacher Profile</h6>
+                </div>
+                <div class="profile-info">
+                <div class="info-item mb-2">
+                    <i class="fas fa-phone-alt mr-2 text-secondary"></i>
+                    <span id="teacherPhone" class="card-text"></span>
+                </div>
+                <div class="info-item mb-2">
+                    <i class="fas fa-calendar mr-2 text-secondary"></i>
+                    <span id="teacherDOB" class="card-text"></span>
+                </div>
+                <div class="info-item mb-2">
+                    <i class="fas fa-graduation-cap mr-2 text-secondary"></i>
+                    <span id="teacherQualification" class="card-text"></span>
+                </div>
+                <div class="info-item mb-3">
+                    <i class="fas fa-briefcase mr-2 text-secondary"></i>
+                    <span id="teacherExperience" class="card-text"></span>
+                </div>
+                </div>
+                <a href="/Teacher/EditProfile" id="editProfile" class="btn btn-primary btn-block">
+                <i class="fas fa-edit mr-2"></i>Edit Profile
+                </a>
+            </div>
+            </div>
+        </div>
+        
+        <!-- up caming class -->
+        <div class="col-classes">
+            <div class="card shadow mb-4">
+            <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Upcoming Classes</h6>
+            </div>
+            <div class="card-body">
+            <div class="table-responsive">
+            <table class="table table-bordered" style="margin-bottom: 0;">
+                <thead>
+                <tr style="background-color: #f8f9fc;">
+                <th style="width: 25%; vertical-align: middle;">Class Name</th>
+                <th style="width: 25%; vertical-align: middle;">Subject</th>
+                <th style="width: 25%; vertical-align: middle;">Time Slot</th>
+                <th style="width: 25%; vertical-align: middle;">Day</th>
+                </tr>
+                </thead>
+                <tbody id="classTableBody" style="font-size: 0.9rem;">
+                
+                </tbody>
+            </table>
+            </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+    
+    <!-- Chart Progress Section -->
+    <div class="row mt-4">
+        <div class="col-lg-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Progress Overview</h6>
+                </div>
+                <div class="card-body">
+                    <div id="teacherProgressChart"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-lg-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Recent Activities</h6>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <span class="date">Today</span>
+                            <p>Posted new assignments for Mathematics Class</p>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="date">Yesterday</span>
+                            <p>Graded Physics homework submissions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/teacher/Dashboard.css" asp-append-version="true" />
+    <script src="~/js/teacher/Dashboard.js" asp-append-version="true"></script>
+}

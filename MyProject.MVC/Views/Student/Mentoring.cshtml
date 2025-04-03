@@ -1,0 +1,52 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Student.cshtml";
+    ViewData["Title"] = "My Class Teacher";
+}
+
+<div class="container mt-5">
+    <div class="card teacher-card animate-fade">
+        <div class="card-header teacher-header">
+            <h3 class="teacher-title">Class Teacher Information</h3>
+        </div>
+        <div class="card-body p-0">
+            <div class="row m-0">
+                <div class="col-md-4 teacher-image-container text-center">
+                    <img id="previewImage" src="https://via.placeholder.com/150" alt="Teacher Image"
+                        class="rounded-circle teacher-image">
+                    <input type="hidden" id="teacherId">
+                </div>
+                <div class="col-md-8 teacher-info">
+                    <div class="info-row">
+                        <div class="info-label">Full Name:</div>
+                        <div class="info-value" id="teacherName"></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Phone Number:</div>
+                        <div class="info-value" id="teacherPhone"></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Email:</div>
+                        <div class="info-value" id="teacherEmail"></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Date of Birth:</div>
+                        <div class="info-value" id="teacherDOB"></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Qualification:</div>
+                        <div class="info-value" id="teacherQualification"></div>
+                    </div>
+                    <div class="info-row">
+                        <div class="info-label">Experience:</div>
+                        <div class="info-value"><span id="teacherExperience"></span> years</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/student/Mentoring.css" asp-append-version="true" />
+    <script src="~/js/student/Mentoring.js" asp-append-version="true"></script>
+}

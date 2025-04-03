@@ -1,0 +1,19 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Teacher.cshtml";
+    ViewData["Title"] = "My Students";
+}
+
+<div class="container-fluid px-12">
+    <div id="studentContainer" class="student-dashboard">
+        <!-- Search bar and headers will be injected by JS -->
+        <div id="studentList" class="row mx-2"></div>
+        
+        <!-- Student cards will be dynamically populated here -->
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/teacher/Students.css" asp-append-version="true" />
+    <script src="~/js/teacher/Students.js" asp-append-version="true"></script>   
+}

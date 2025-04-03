@@ -1,0 +1,39 @@
+@{
+    ViewData["Title"] = "Student Management";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<div class="container-fluid p-0">
+    <div class="row mb-4">
+        <div class="col-12 col-sm-6">
+            <h2 class="admin-page-title">@ViewData["Title"]</h2>
+        </div>
+        <div class="col-12 col-sm-6 text-sm-end mt-3 mt-sm-0">
+            <button type="button" id="btnadd" class="k-button k-button-lg k-button-solid-info">
+                <i class="bi bi-plus-lg"></i> Add Student
+            </button>
+        </div>
+    </div>
+
+    <div class="card admin-card">
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <div id="grid" style="min-height: 550px;"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Windows -->
+<div id="myKModal">
+    <form id="studentForm"></form>
+</div>
+
+<div id="editStudent">
+    <form id="editForm"></form>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/admin/student.css" asp-append-version="true" />
+    <script src="~/js/admin/student.js" asp-append-version="true"></script>
+}

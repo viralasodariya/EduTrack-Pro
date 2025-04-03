@@ -1,0 +1,80 @@
+.notification-container {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.notification-list {
+    padding: 0;
+}
+
+.notification-item {
+    padding: 15px;
+    border-left: 4px solid transparent;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.notification-item:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+}
+
+.unread-notification {
+    border-left-color: #0d6efd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.read-notification {
+    border-left-color: #6c757d;
+    opacity: 0.85;
+}
+
+.notification-item strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+    color: #212529;
+}
+
+.notification-item small {
+    color: #6c757d;
+    font-size: 0.8rem;
+}
+
+.notification-time {
+    display: flex;
+    align-items: center;
+}
+
+.notification-time i {
+    margin-right: 5px;
+    font-size: 0.75rem;
+}
+
+/* Custom scrollbar for notification containers */
+.notification-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+.notification-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.notification-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 5px;
+}
+
+.notification-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* No notifications message */
+.no-notifications {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}

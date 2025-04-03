@@ -1,0 +1,110 @@
+/* Main Dashboard Styles */
+.dashboard-title {
+    color: #333;
+    font-weight: 600;
+    border-bottom: 2px solid #2196F3;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.dashboard-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 100%;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-size: 1.2rem;
+    color: #2196F3;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Principal Card */
+.principal-card {
+    background: linear-gradient(135deg, #42a5f5, #1976d2);
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.principal-card h2 {
+    font-size: 1.4rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Chart Styling */
+.chart-container {
+    height: 300px;
+}
+
+.k-chart {
+    font-family: inherit;
+}
+
+.k-chart .k-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.k-chart .k-label {
+    font-size: 0.9rem;
+}
+
+/* Notification List Styling */
+.notification-container {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.notification-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #2196F3;
+    transition: background-color 0.2s;
+}
+
+.notification-item:hover {
+    background-color: #f0f0f0;
+}
+
+.notification-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.notification-item small {
+    color: #777;
+    font-size: 0.85rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .chart-container, 
+    .treeview-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-card {
+        margin-bottom: 20px;
+    }
+}
+

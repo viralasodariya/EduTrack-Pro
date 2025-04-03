@@ -1,0 +1,374 @@
+:root {
+    --primary-color: #4361ee;
+    --primary-light: #6384ff;
+    --primary-dark: #3f37c9;
+    --secondary-color: #4895ef;
+    --accent-color: #3a0ca3;
+    --text-color: #333333;
+    --light-gray: #f5f5f5;
+    --hover-bg: #f0f4ff;
+    --border-radius: 6px;
+    --shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* General Styles */
+body {
+    color: var(--text-color);
+    background-color: #ffffff;
+}
+
+.page-header {
+    color: var(--primary-color);
+    font-weight: 600;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.form-header {
+    color: var(--primary-dark);
+    font-weight: 500;
+    margin: 20px 0 15px 0;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+/* Card Styles */
+.card {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: none;
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom: none;
+    font-weight: 600;
+    padding: 15px 20px;
+}
+
+.card-body {
+    padding: 25px;
+    background-color: white;
+}
+
+/* Enhanced Kendo Grid Styles */
+#classListGrid,
+#assignedGrid {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    border: none !important;
+}
+
+.k-grid-header {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-dark) !important;
+}
+
+.k-grid-header th.k-header {
+    color: white !important;
+    font-weight: 500;
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-dark) !important;
+    padding: 12px 27px !important;
+}
+
+.k-grid-content {
+    border: 1px solid #e0e0e0 !important;
+    border-top: none !important;
+}
+
+.k-grid tr {
+    transition: background-color 0.2s ease;
+}
+
+.k-grid tr:hover {
+    background-color: var(--hover-bg) !important;
+}
+
+.k-grid td {
+    padding: 12px 15px !important;
+    border-color: #e0e0e0 !important;
+}
+
+.k-grid .k-grid-toolbar {
+    background-color: #f9f9f9 !important;
+    border-bottom: 1px solid #e0e0e0 !important;
+    padding: 10px !important;
+}
+
+.k-grid .k-grid-search {
+    width: 250px !important;
+    margin-right: 10px !important;
+}
+
+.k-grid .k-pager-wrap {
+    background-color: #f9f9f9 !important;
+    border-top: 1px solid #e0e0e0 !important;
+    padding: 10px !important;
+}
+
+/* Enhanced Form Styles */
+#addNewClasskendForm .k-form-field {
+    margin-bottom: 20px;
+}
+
+.k-form-field > .k-label {
+    font-weight: 500;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.k-input, 
+.k-dropdown, 
+.k-combobox,
+.k-datepicker,
+.k-timepicker,
+.k-numerictextbox {
+    border-radius: var(--border-radius) !important;
+    border: 1px solid #d0d0d0 !important;
+    padding: 10px 12px !important;
+    width: 100% !important;
+    transition: border-color 0.2s, box-shadow 0.2s !important;
+}
+
+.k-input:focus, 
+.k-dropdown:focus, 
+.k-combobox:focus,
+.k-datepicker:focus,
+.k-timepicker:focus,
+.k-numerictextbox:focus,
+.k-state-focused {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px rgba(44, 120, 115, 0.2) !important;
+}
+
+.k-popup .k-list .k-item.k-state-selected {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.k-popup .k-list .k-item:hover {
+    background-color: var(--hover-bg) !important;
+}
+
+/* Button Styles */
+.k-button, 
+button.k-button,
+.btn-primary {
+    border-radius: var(--border-radius) !important;
+    padding: 10px 18px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.5px !important;
+}
+
+.k-button.k-primary,
+button.k-button.k-primary,
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: white !important;
+}
+
+.k-button.k-primary:hover,
+button.k-button.k-primary:hover,
+.btn-primary:hover {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.k-button.k-primary:active,
+button.k-button.k-primary:active,
+.btn-primary:active {
+    transform: translateY(1px) !important;
+    box-shadow: none !important;
+}
+
+/* Assignment Section */
+.assignment-section {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+}
+
+.assignment-header {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 500;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 10px;
+}
+
+.list-container {
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #d0d0d0;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    background-color: var(--light-gray);
+    margin-bottom: 20px;
+    transition: border-color 0.2s;
+}
+
+.list-container:hover {
+    border-color: var(--primary-color);
+}
+
+#teachersList .k-listview-item, 
+#classesList .k-listview-item {
+    padding: 10px 12px;
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.2s;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+#teachersList .k-listview-item:hover, 
+#classesList .k-listview-item:hover {
+    background-color: var(--hover-bg);
+    transform: translateX(2px);
+}
+
+#teachersList .k-listview-item:last-child, 
+#classesList .k-listview-item:last-child {
+    border-bottom: none;
+}
+
+.k-listview-item i {
+    color: var(--primary-color);
+}
+
+.assignment-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--primary-color);
+}
+
+.assignment-form .form-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.assignment-form label {
+    color: var(--primary-dark);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+/* Notification Styles */
+.k-notification {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 12px 20px !important;
+    font-weight: 500;
+}
+
+.k-notification-success {
+    background-color: #43a047 !important;
+    color: white !important;
+    border-left: 4px solid #2e7d32 !important;
+}
+
+.k-notification-error {
+    background-color: #e53935 !important;
+    color: white !important;
+    border-left: 4px solid #c62828 !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .assignment-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .assignment-form .form-group {
+        width: 100%;
+    }
+    
+    .card-body {
+        padding: 15px;
+    }
+    
+    .assignment-header {
+        font-size: 1.1rem;
+    }
+    
+    .k-button, button.k-button, .btn-primary {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-header {
+        font-size: 1.5rem;
+    }
+    
+    .card-header h4 {
+        font-size: 1.1rem;
+    }
+    
+    .list-container {
+        max-height: 200px;
+    }
+}
+
+/* Class specific styles */
+.page-header {
+    color: #333;
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.assignment-header {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.list-container {
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    min-height: 200px;
+    padding: 10px;
+}
+
+.assignment-form {
+    padding: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* No sidebar style overrides to ensure consistency with admin-styles.css */

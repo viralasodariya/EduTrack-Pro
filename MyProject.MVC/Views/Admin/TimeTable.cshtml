@@ -1,0 +1,67 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<div class="container-fluid mt-4">
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Timetable Management</h4>
+                </div>
+                <div class="card-body">
+                    <form id="timetableForm" class="row g-3">
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <label for="classDropdown" class="form-label">Class:</label>
+                            <input id="classDropdown" class="form-control" />
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <label for="teacherDropdown" class="form-label">Teacher:</label>
+                            <input id="teacherDropdown" class="form-control" />
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <label for="subjectDropdown" class="form-label">Subject:</label>
+                            <input id="subjectDropdown" class="form-control" />
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <label for="timeSlotDropdown" class="form-label">Time Slot:</label>
+                            <input id="timeSlotDropdown" class="form-control" />
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 mb-3">
+                            <label for="dayDropdown" class="form-label">Day:</label>
+                            <input id="dayDropdown" class="form-control" />
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 mb-3 ">
+                            <button id="addTimetable" type="button" class="btn btn-primary w-100 mt-4">
+                                <i class="fas fa-plus-circle me-2"></i>Add Timetable
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Timetable Entries</h4>
+                </div>
+                <div class="card-body">
+                    <div id="timetableGrid" class="timetable-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/admin/TimeTable.css" asp-append-version="true" />
+    <script src="~/js/admin/TimeTable.js" asp-append-version="true"></script>
+}

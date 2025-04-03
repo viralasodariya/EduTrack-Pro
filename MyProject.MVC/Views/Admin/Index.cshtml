@@ -1,0 +1,63 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<div class="container-fluid">
+    <h2 class="dashboard-title mb-4">Admin Dashboard</h2>
+
+    <div id="dashboardLayout" class="row">
+        <!-- Principal Tile -->
+        <div class="col-md-6 col-lg-3 mb-4">
+            <div id="principalContainer" class="dashboard-card principal-card">
+            <h4 class="card-title fw-bold text-dark mb-3">Principal Details</h4>
+            <div class="principal-info">
+                <div class="info-item" style="margin-bottom: 10px;">
+                <span class="label" style="font-weight: bold; color: #2c3e50; display: inline-block;">Name:</span>
+                <span id="PrincipleName" style="color: #34495e; display: inline-block;"></span>
+                </div>
+                <div class="info-item" style="margin-bottom: 10px;">
+                <span class="label" style="font-weight: bold; color: #2c3e50;">Contact:</span>
+                <span class="value" style="color: #34495e;">(555) 123-4567</span>
+                </div>
+                <div class="info-item" style="margin-bottom: 10px;">
+                <span class="label" style="font-weight: bold; color: #2c3e50;">Email:</span>
+                <span class="value" style="color: #34495e;">principal@school.edu</span>
+                </div>
+                <div class="info-item" style="margin-bottom: 10px;">
+                <span class="label" style="font-weight: bold; color: #2c3e50;">Office Hours:</span>
+                <span class="value" style="color: #34495e;">Mon-Fri, 8AM-4PM</span>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Teacher-Student Hierarchy -->
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="dashboard-card">
+                <h4 class="card-title">Teacher-Student Hierarchy</h4>
+                <div id="teacherStudentTreeview" class="treeview-container"></div>
+            </div>
+        </div>
+
+        <!-- Student Count Chart -->
+        <div class="col-md-6 col-lg-5 mb-4">
+            <div class="dashboard-card">
+                <h4 class="card-title">Student Distribution</h4>
+                <div id="studentCountChart" class="chart-container"></div>
+            </div>
+        </div>
+
+        <!-- Latest Notifications -->
+        <div class="col-md-6 col-lg-12 mb-4">
+            <div class="dashboard-card">
+                <h4 class="card-title">Latest Notifications</h4>
+                <div id="notificationsList" class="notification-container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/admin/Dashboard.css" asp-append-version="true" />
+    <script src="~/js/admin/Dashboard.js" asp-append-version="true"></script>
+}

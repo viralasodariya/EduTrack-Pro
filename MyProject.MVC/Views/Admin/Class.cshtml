@@ -1,0 +1,109 @@
+@{
+    ViewData["Title"] = "Class Management";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<div class="container-fluid py-4">
+    <h1 class="page-header">Class Management</h1>
+    <div id="notification"></div>
+
+    <div class="row">
+        <!-- Class List Section -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">Class List</h4>
+                </div>
+                <div class="card-body">
+                    <div id="classListGrid" class="w-100"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add New Class Section -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">Add New Class</h4>
+                </div>
+                <div class="card-body">
+                    <div id="addNewClasskendForm" class="w-100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- Unassigned Teachers & Classes Section -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">Unassigned Resources</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="assignment-header">Teachers</h5>
+                            <div class="list-container">
+                                <div id="teachersList"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="assignment-header">Classes</h5>
+                            <div class="list-container">
+                                <div id="classesList"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Assignment Section -->
+        <div class="col-lg-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">Assign Class to Teacher</h4>
+                </div>
+                <div class="card-body">
+                    <div class="assignment-form">
+                        <div class="form-group">
+                            <label for="teacherDropdown" class="form-label">Select Teacher</label>
+                            <div id="teacherDropdown-wrapper">
+                                <select id="teacherDropdown" class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="classDropdown" class="form-label">Select Class</label>
+                            <div id="classDropdown-wrapper">
+                                <select id="classDropdown" class="form-control"></select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button id="assignBtn" class="btn btn-primary">Assign</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assigned Grid Section -->
+    <div class="row">
+        <div class="col-12 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">Assigned Classes & Teachers</h4>
+                </div>
+                <div class="card-body">
+                    <div id="assignedGrid" class="w-100"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/admin/Class.css" asp-append-version="true" />
+    <script src="~/js/admin/Class.js" asp-append-version="true"></script>
+}

@@ -1,0 +1,295 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Student.cshtml";
+    ViewData["Title"] = "Edit Profile";
+}
+
+<div class="container-fluid mb-3">
+    <div class="row">
+        <div class="col-md-12 text-end">
+            <a href="/student/profile" class="btn btn-outline-secondary">
+                <i class="fas fa-arrow-left me-2"></i>Back
+            </a>
+        </div>
+    </div>
+</div>
+<div class="profile-container mt-5">
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="profile-sidebar">
+                <div class="profile-image-container">
+                    <div class="profile-image-wrapper">
+                        <img id="profileImage"
+                            src="https://ui-avatars.com/api/?name=Student&background=2C3E50&color=fff&size=200"
+                            alt="Profile Image" class="profile-image">
+                        <div class="profile-image-overlay">
+                            <label for="Image" class="image-upload-icon">
+                                <i class="fas fa-camera"></i>
+                            </label>
+                            <input type="file" id="Image" class="d-none">
+                        </div>
+                    </div>
+                </div>
+                <h3 id="profileName" class="profile-name">Student Name</h3>
+                <p id="profileEmail" class="profile-email"><i class="fas fa-envelope me-2"></i>student@email.com</p>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">ClassName</span>
+                        <span id="classnameText" class="stat-label">Class</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <span class="stat-value">2023</span>
+                        <span class="stat-label">Joined</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-9">
+            <div class="profile-content-card">
+                <div class="profile-tabs-wrapper">
+                    <ul class="nav nav-pills profile-tabs" id="profileTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="personal-tab" data-bs-toggle="tab"
+                                data-bs-target="#personal" type="button" role="tab" aria-selected="true">
+                                <i class="fas fa-user-circle me-2"></i> Personal Info
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="father-tab" data-bs-toggle="tab" data-bs-target="#father"
+                                type="button" role="tab" aria-selected="false">
+                                <i class="fas fa-male me-2"></i> Father
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="mother-tab" data-bs-toggle="tab" data-bs-target="#mother"
+                                type="button" role="tab" aria-selected="false">
+                                <i class="fas fa-female me-2"></i> Mother
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="guardian-tab" data-bs-toggle="tab" data-bs-target="#guardian"
+                                type="button" role="tab" aria-selected="false">
+                                <i class="fas fa-user-shield me-2"></i> Guardian
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="tab-content profile-tab-content p-4" id="profileTabContent">
+                    <!-- Personal Info Tab -->
+                    <div class="tab-pane fade show active" id="personal" role="tabpanel" aria-labelledby="personal-tab">
+                        <h4 class="section-title"><i class="fas fa-id-card me-2"></i>Personal Information</h4>
+                        <form id="editStudentForm" class="row g-4">
+                            <input type="hidden" id="studentId">
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="text" id="fullName" class="form-control editable"
+                                        placeholder="Full Name">
+                                    <label for="fullName"><i class="fas fa-user me-2"></i>Full Name</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="date" id="dob" class="form-control editable"
+                                        placeholder="Date of Birth">
+                                    <label for="dob"><i class="fas fa-calendar-alt me-2"></i>Date of Birth</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <select id="gender" class="form-select editable" placeholder="Gender">
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                    </select>
+                                    <label for="gender"><i class="fas fa-venus-mars me-2"></i>Gender</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="text" id="className" class="form-control" placeholder="Class" disabled>
+                                    <label for="className"><i class="fas fa-chalkboard me-2"></i>Class</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="text" id="enrollmentDate" class="form-control"
+                                        placeholder="Enrollment Date" disabled>
+                                    <label for="enrollmentDate"><i class="fas fa-calendar-check me-2"></i>Enrollment
+                                        Date</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="email" id="email" class="form-control" placeholder="Email" disabled>
+                                    <label for="email"><i class="fas fa-envelope me-2"></i>Email</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-4">
+                                <button type="button" class="btn btn-primary save-btn" onclick="updateStudent()">
+                                    <i class="fas fa-save me-2"></i> Save Changes
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Father Tab -->
+                    <div class="tab-pane fade" id="father" role="tabpanel" aria-labelledby="father-tab">
+                        <h4 class="section-title"><i class="fas fa-male me-2"></i>Father's Details</h4>
+                        <form class="row g-4">
+                            <input type="hidden" id="fatherId">
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="text" id="fatherName" class="form-control" placeholder="Full Name">
+                                    <label for="fatherName"><i class="fas fa-user me-2"></i>Full Name</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="text" id="fatherPhone" class="form-control" placeholder="Phone">
+                                    <label for="fatherPhone"><i class="fas fa-phone me-2"></i>Phone</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="email" id="fatherEmail" class="form-control" placeholder="Email">
+                                    <label for="fatherEmail"><i class="fas fa-envelope me-2"></i>Email</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating form-group-animated">
+                                    <textarea id="fatherAddress" class="form-control" placeholder="Address"
+                                        style="height: 100px"></textarea>
+                                    <label for="fatherAddress"><i class="fas fa-home me-2"></i>Address</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <button type="button" id="saveFather" class="btn btn-primary save-btn">
+                                    <i class="fas fa-save me-2"></i> Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Mother Tab -->
+                    <div class="tab-pane fade" id="mother" role="tabpanel" aria-labelledby="mother-tab">
+                        <h4 class="section-title"><i class="fas fa-female me-2"></i>Mother's Details</h4>
+                        <form class="row g-4">
+                            <input type="hidden" id="motherId">
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="text" id="motherName" class="form-control" placeholder="Full Name">
+                                    <label for="motherName"><i class="fas fa-user me-2"></i>Full Name</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="text" id="motherPhone" class="form-control" placeholder="Phone">
+                                    <label for="motherPhone"><i class="fas fa-phone me-2"></i>Phone</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="email" id="motherEmail" class="form-control" placeholder="Email">
+                                    <label for="motherEmail"><i class="fas fa-envelope me-2"></i>Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating form-group-animated">
+                                    <textarea id="motherAddress" class="form-control" placeholder="Address"
+                                        style="height: 100px"></textarea>
+                                    <label for="motherAddress"><i class="fas fa-home me-2"></i>Address</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <button type="button" id="saveMother" class="btn btn-primary save-btn">
+                                    <i class="fas fa-save me-2"></i> Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Guardian Tab -->
+                    <div class="tab-pane fade" id="guardian" role="tabpanel" aria-labelledby="guardian-tab">
+                        <h4 class="section-title"><i class="fas fa-user-shield me-2"></i>Guardian's Details</h4>
+                        <form class="row g-4">
+                            <input type="hidden" id="guardianId">
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="text" id="guardianName" class="form-control" placeholder="Full Name">
+                                    <label for="guardianName"><i class="fas fa-user me-2"></i>Full Name</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="text" id="guardianPhone" class="form-control" placeholder="Phone">
+                                    <label for="guardianPhone"><i class="fas fa-phone me-2"></i>Phone</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-floating form-group-animated">
+                                    <input type="email" id="guardianEmail" class="form-control" placeholder="Email">
+                                    <label for="guardianEmail"><i class="fas fa-envelope me-2"></i>Email</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <div class="form-floating form-group-animated">
+                                    <textarea id="guardianAddress" class="form-control" placeholder="Address"
+                                        style="height: 100px"></textarea>
+                                    <label for="guardianAddress"><i class="fas fa-home me-2"></i>Address</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <button type="button" id="saveGuardian" class="btn btn-primary save-btn">
+                                    <i class="fas fa-save me-2"></i> Save
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="saveSuccessToast" class="toast align-items-center text-white border-0" role="alert" aria-live="assertive"
+        aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <i class="fas fa-check-circle me-2"></i> Changes saved successfully!
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+<div id='notification'></div>
+
+
+@section Scripts {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="~/css/student/EditProfile.css" asp-append-version="true" />
+    <script src="~/js/student/EditProfile.js" asp-append-version="true"></script>
+}

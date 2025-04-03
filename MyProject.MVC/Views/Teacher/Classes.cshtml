@@ -1,0 +1,35 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Teacher.cshtml";
+}
+
+<div class="classes-container">
+    <div class="container-fluid">
+        <div class="row mb-4">
+            <div class="col-md-8">
+                <h2 class="page-title">My Class Schedule</h2>
+                <p class="subtitle">View your upcoming classes for the week</p>
+            </div>
+            <div class="col-md-4">
+                <div class="info-box">
+                    <i class="bi bi-info-circle me-2"></i>
+                    <span>Classes are automatically updated from your timetable</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow-sm">
+                    <div class="card-body p-0">
+                        <div id="scheduler"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/teacher/Classes.css" asp-append-version="true" />
+    <script src="~/js/teacher/Classes.js" asp-append-version="true"></script>
+}

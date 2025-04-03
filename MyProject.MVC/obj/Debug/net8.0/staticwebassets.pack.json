@@ -1,0 +1,545 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MyProject.MVC.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MyProject.MVC.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\Landing\\About.css",
+      "PackagePath": "staticwebassets\\css\\Landing\\About.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\Landing\\course.css",
+      "PackagePath": "staticwebassets\\css\\Landing\\course.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\Landing\\home.css",
+      "PackagePath": "staticwebassets\\css\\Landing\\home.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\Landing\\layout.css",
+      "PackagePath": "staticwebassets\\css\\Landing\\layout.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\admin\\Class.css",
+      "PackagePath": "staticwebassets\\css\\admin\\Class.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\admin\\Dashboard.css",
+      "PackagePath": "staticwebassets\\css\\admin\\Dashboard.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\admin\\Notification.css",
+      "PackagePath": "staticwebassets\\css\\admin\\Notification.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\admin\\Progress.css",
+      "PackagePath": "staticwebassets\\css\\admin\\Progress.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\admin\\Subject.css",
+      "PackagePath": "staticwebassets\\css\\admin\\Subject.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\admin\\TimeTable.css",
+      "PackagePath": "staticwebassets\\css\\admin\\TimeTable.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\admin\\admin-styles.css",
+      "PackagePath": "staticwebassets\\css\\admin\\admin-styles.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\admin\\student.css",
+      "PackagePath": "staticwebassets\\css\\admin\\student.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\student\\EditProfile.css",
+      "PackagePath": "staticwebassets\\css\\student\\EditProfile.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\student\\Feedback.css",
+      "PackagePath": "staticwebassets\\css\\student\\Feedback.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\student\\Index.css",
+      "PackagePath": "staticwebassets\\css\\student\\Index.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\student\\Mentoring.css",
+      "PackagePath": "staticwebassets\\css\\student\\Mentoring.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\student\\Profile.css",
+      "PackagePath": "staticwebassets\\css\\student\\Profile.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\student\\StudentMaterial.css",
+      "PackagePath": "staticwebassets\\css\\student\\StudentMaterial.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\student\\TimeTable.css",
+      "PackagePath": "staticwebassets\\css\\student\\TimeTable.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\student\\layout_student.css",
+      "PackagePath": "staticwebassets\\css\\student\\layout_student.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\teacher\\AddProfile.css",
+      "PackagePath": "staticwebassets\\css\\teacher\\AddProfile.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\teacher\\Classes.css",
+      "PackagePath": "staticwebassets\\css\\teacher\\Classes.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\teacher\\Dashboard.css",
+      "PackagePath": "staticwebassets\\css\\teacher\\Dashboard.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\teacher\\EditProfile.css",
+      "PackagePath": "staticwebassets\\css\\teacher\\EditProfile.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\teacher\\Materials.css",
+      "PackagePath": "staticwebassets\\css\\teacher\\Materials.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\teacher\\Students.css",
+      "PackagePath": "staticwebassets\\css\\teacher\\Students.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\teacher\\Subjects.css",
+      "PackagePath": "staticwebassets\\css\\teacher\\Subjects.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\css\\teacher\\_Layout_Teacher.css",
+      "PackagePath": "staticwebassets\\css\\teacher\\_Layout_Teacher.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\img\\home.png",
+      "PackagePath": "staticwebassets\\img\\home.png"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\img\\home2.jpg",
+      "PackagePath": "staticwebassets\\img\\home2.jpg"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\img\\signup.jpg",
+      "PackagePath": "staticwebassets\\img\\signup.jpg"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\admin\\Class.js",
+      "PackagePath": "staticwebassets\\js\\admin\\Class.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\admin\\Dashboard.js",
+      "PackagePath": "staticwebassets\\js\\admin\\Dashboard.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\admin\\Notification.js",
+      "PackagePath": "staticwebassets\\js\\admin\\Notification.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\admin\\Progress.js",
+      "PackagePath": "staticwebassets\\js\\admin\\Progress.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\admin\\Subject.js",
+      "PackagePath": "staticwebassets\\js\\admin\\Subject.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\admin\\TimeTable.js",
+      "PackagePath": "staticwebassets\\js\\admin\\TimeTable.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\admin\\student.js",
+      "PackagePath": "staticwebassets\\js\\admin\\student.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\student\\EditProfile.js",
+      "PackagePath": "staticwebassets\\js\\student\\EditProfile.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\student\\Feedback.js",
+      "PackagePath": "staticwebassets\\js\\student\\Feedback.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\student\\Index.js",
+      "PackagePath": "staticwebassets\\js\\student\\Index.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\student\\Mentoring.js",
+      "PackagePath": "staticwebassets\\js\\student\\Mentoring.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\student\\Profile.js",
+      "PackagePath": "staticwebassets\\js\\student\\Profile.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\student\\StudentMaterial.js",
+      "PackagePath": "staticwebassets\\js\\student\\StudentMaterial.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\student\\TimeTable.js",
+      "PackagePath": "staticwebassets\\js\\student\\TimeTable.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\teacher\\AddProfile.js",
+      "PackagePath": "staticwebassets\\js\\teacher\\AddProfile.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\teacher\\Classes.js",
+      "PackagePath": "staticwebassets\\js\\teacher\\Classes.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\teacher\\Dashboard.js",
+      "PackagePath": "staticwebassets\\js\\teacher\\Dashboard.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\teacher\\EditProfile.js",
+      "PackagePath": "staticwebassets\\js\\teacher\\EditProfile.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\teacher\\Materials.js",
+      "PackagePath": "staticwebassets\\js\\teacher\\Materials.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\teacher\\Students.js",
+      "PackagePath": "staticwebassets\\js\\teacher\\Students.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\js\\teacher\\Subjects.js",
+      "PackagePath": "staticwebassets\\js\\teacher\\Subjects.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\kendo\\kendo.all.min.js",
+      "PackagePath": "staticwebassets\\lib\\kendo\\kendo.all.min.js"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\lib\\kendo\\kendo.default-v2.min.css",
+      "PackagePath": "staticwebassets\\lib\\kendo\\kendo.default-v2.min.css"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\materials\\1b1997db-785b-46b8-9aba-f4de2c22107a.pdf",
+      "PackagePath": "staticwebassets\\materials\\1b1997db-785b-46b8-9aba-f4de2c22107a.pdf"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\materials\\338f86b1-ca27-48d0-acbe-fdcff7eb2182.pdf",
+      "PackagePath": "staticwebassets\\materials\\338f86b1-ca27-48d0-acbe-fdcff7eb2182.pdf"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\materials\\344cd05f-5e51-45ab-918d-b53a71e833ad.docx",
+      "PackagePath": "staticwebassets\\materials\\344cd05f-5e51-45ab-918d-b53a71e833ad.docx"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\materials\\6cf2b03a-88e2-4d04-9819-63b6ec4571ea.pdf",
+      "PackagePath": "staticwebassets\\materials\\6cf2b03a-88e2-4d04-9819-63b6ec4571ea.pdf"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\materials\\7a8d1bae-f169-43ac-9f5f-242455ac5df4.pdf",
+      "PackagePath": "staticwebassets\\materials\\7a8d1bae-f169-43ac-9f5f-242455ac5df4.pdf"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\studentProfile\\07971c46-f2aa-4585-9452-893a967f9268.png",
+      "PackagePath": "staticwebassets\\studentProfile\\07971c46-f2aa-4585-9452-893a967f9268.png"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\studentProfile\\10cd246b-be9f-496c-a250-7f8395a1e324.png",
+      "PackagePath": "staticwebassets\\studentProfile\\10cd246b-be9f-496c-a250-7f8395a1e324.png"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\studentProfile\\242f5f6d-9f19-4c20-9da2-f0597e2127fe.png",
+      "PackagePath": "staticwebassets\\studentProfile\\242f5f6d-9f19-4c20-9da2-f0597e2127fe.png"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\studentProfile\\24cf8eaa-c309-4eaa-8b15-8d32c3d0bbe7.png",
+      "PackagePath": "staticwebassets\\studentProfile\\24cf8eaa-c309-4eaa-8b15-8d32c3d0bbe7.png"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\studentProfile\\2ea9f605-10a6-4ca5-aab6-f5200ae3313a.jpg",
+      "PackagePath": "staticwebassets\\studentProfile\\2ea9f605-10a6-4ca5-aab6-f5200ae3313a.jpg"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\studentProfile\\36140e5d-4daa-4848-aa9e-bd6b868119b1.png",
+      "PackagePath": "staticwebassets\\studentProfile\\36140e5d-4daa-4848-aa9e-bd6b868119b1.png"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\studentProfile\\57dc6d2a-d1d4-494c-9443-37978b0861ea.png",
+      "PackagePath": "staticwebassets\\studentProfile\\57dc6d2a-d1d4-494c-9443-37978b0861ea.png"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\studentProfile\\77b22f7c-fb84-47c7-b5c2-3533db30a843.png",
+      "PackagePath": "staticwebassets\\studentProfile\\77b22f7c-fb84-47c7-b5c2-3533db30a843.png"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\studentProfile\\7d1407b0-707b-473c-bd6e-ff948aae8998.png",
+      "PackagePath": "staticwebassets\\studentProfile\\7d1407b0-707b-473c-bd6e-ff948aae8998.png"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\studentProfile\\cb334dec-c588-4d79-bd60-ebdd868f0451.png",
+      "PackagePath": "staticwebassets\\studentProfile\\cb334dec-c588-4d79-bd60-ebdd868f0451.png"
+    },
+    {
+      "Id": "E:\\casepoint\\project-mvc\\MyProject.MVC\\wwwroot\\studentProfile\\ec251b6f-50ce-4058-ab56-f67a80a16a14.png",
+      "PackagePath": "staticwebassets\\studentProfile\\ec251b6f-50ce-4058-ab56-f67a80a16a14.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MyProject.MVC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MyProject.MVC.props",
+      "PackagePath": "build\\MyProject.MVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MyProject.MVC.props",
+      "PackagePath": "buildMultiTargeting\\MyProject.MVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MyProject.MVC.props",
+      "PackagePath": "buildTransitive\\MyProject.MVC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,306 @@
+/* Base container styles */
+.student-dashboard {
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+
+
+
+.student-card {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.student-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.student-card .card-header {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border-bottom: none;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.student-card .card-body {
+    padding: 22px;
+    background-color: #fff;
+}
+
+.student-info {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px dashed #ecf0f1;
+}
+
+.student-info:last-child {
+    border-bottom: none;
+}
+
+.student-info .info-label {
+    font-weight: 600;
+    color: #7f8c8d;
+    display: inline-block;
+    width: 100px;
+    font-size: 14px;
+}
+
+.student-info .info-value {
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.search-container {
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e6ed;
+    width: 100%;
+}
+
+.page-header {
+    padding: 25px 0;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e6ed;
+}
+
+.page-header h2 {
+    color: #2c3e50;
+    font-weight: 700;
+    position: relative;
+    padding-left: 15px;
+}
+
+.page-header h2:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+    .student-info .info-label {
+        width: 90px;
+        font-size: 13px;
+    }
+    
+    .student-card .card-header {
+        padding: 15px;
+    }
+    
+    .avatar-placeholder {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    
+    .page-header h2 {
+        font-size: 24px;
+    }
+    
+    .container-fluid {
+        padding: 10px;
+    }
+    
+    .student-dashboard {
+        padding: 10px;
+    }
+}
+
+.student-count {
+    background-color: #f1f7fc;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    color: #34495e;
+    font-weight: 600;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+}
+
+.avatar-placeholder {
+    width: 55px;
+    height: 55px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.badge {
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.bg-success {
+    background-color: #2ecc71 !important;
+}
+
+.bg-danger {
+    background-color: #e74c3c !important;
+}
+
+.search-container .input-group {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.search-container .form-control {
+    border: 1px solid #e0e6ed;
+    padding: 12px 20px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.search-container .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    border-color: #3498db;
+}
+
+.search-container .btn-primary {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    border: none;
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.search-container .btn-primary:hover {
+    background: linear-gradient(135deg, #2980b9 0%, #1a5276 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(41, 128, 185, 0.3);
+}
+
+.btn-outline-primary {
+    color: #3498db;
+    border-color: #3498db;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: #3498db;
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(52, 152, 219, 0.2);
+}
+
+.alert {
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border-left-color: #17a2b8;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border-left-color: #ffc107;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left-color: #dc3545;
+}
+
+@media (max-width: 992px) {
+    .col-lg-4 {
+        margin-bottom: 20px;
+    }
+    
+    .container-fluid {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .search-container {
+        padding: 15px;
+    }
+    
+    .search-container .form-control,
+    .search-container .btn-primary {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    
+    .student-card .card-body {
+        padding: 15px;
+    }
+    
+    .row {
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+    
+    .col-md-6, .col-lg-4 {
+        padding: 0 10px;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#studentList .col-md-6 {
+    animation: fadeIn 0.5s ease forwards;
+    opacity: 0;
+}
+
+#studentList .col-md-6:nth-child(1) { animation-delay: 0.1s; }
+#studentList .col-md-6:nth-child(2) { animation-delay: 0.2s; }
+#studentList .col-md-6:nth-child(3) { animation-delay: 0.3s; }
+#studentList .col-md-6:nth-child(4) { animation-delay: 0.4s; }
+#studentList .col-md-6:nth-child(5) { animation-delay: 0.5s; }
+#studentList .col-md-6:nth-child(6) { animation-delay: 0.6s; }
+
+/* Row spacing fixes */
+.row {
+    margin-right: -10px;
+    margin-left: -10px;
+    width: 100%;
+}
+
+.col-md-6, .col-lg-4 {
+    padding: 0 15px;
+}

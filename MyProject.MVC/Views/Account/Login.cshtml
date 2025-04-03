@@ -1,0 +1,236 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Login";
+}
+
+<div class="container login-container">
+    <div class="row">
+        <!-- Image column -->
+        <div class="col-md-6 d-none d-md-block">
+            <div class="login-image-container h-100 d-flex align-items-center justify-content-center">
+                <img src="~/img/signup.jpg" alt="Login" class="img-fluid login-image">
+            </div>
+        </div>
+        
+        <!-- Form column -->
+        <div class="col-md-6">
+            <div class="login-form-container p-4">
+                <h2 class="text-center mb-4">Sign In</h2>
+                <div id="notification" class="mb-3"></div>
+                <form action="" id="loginForm"></form>
+                
+                <!-- Signup link -->
+                <div class="signup-section text-center mt-4">
+                    <p class="text-muted">Don't have an account? <a href="/Account/Signup" class="signup-link">Create Account</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .login-container {
+        margin: 3rem auto;
+        max-width: 1000px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+    
+    .login-image-container {
+        background-color: #f8f9fa;
+        padding: 20px;
+    }
+    
+    .login-image {
+        max-height: 500px;
+        border-radius: 8px;
+    }
+    
+    .login-form-container {
+        padding: 30px;
+    }
+    
+    .signup-link {
+        color: #0275d8;
+        font-weight: 500;
+        text-decoration: none;
+    }
+    
+    .signup-link:hover {
+        text-decoration: underline;
+    }
+    
+    /* Form styling */
+    .k-form {
+        max-width: 100%;
+    }
+    
+    .k-form .k-form-field {
+        margin-bottom: 1.5rem;
+    }
+    
+    .k-form .k-label {
+        font-weight: 500;
+        color: #495057;
+    }
+    
+    .k-form .k-textbox, 
+    .k-form .k-dropdown {
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid #ced4da;
+        padding: 8px 12px;
+    }
+    
+    .k-form .k-textbox:focus,
+    .k-form .k-dropdown:focus {
+        border-color: #0275d8;
+        box-shadow: 0 0 0 0.2rem rgba(2, 117, 216, 0.25);
+    }
+    
+    /* Button styling */
+    .btn-primary {
+        background-color: #0275d8;
+        border-color: #0275d8;
+        padding: 10px 20px;
+        font-weight: 500;
+        border-radius: 4px;
+        transition: all 0.3s;
+        width: 100%;
+    }
+    
+    .btn-primary:hover {
+        background-color: #025aa5;
+        border-color: #025aa5;
+    }
+    
+    /* Notification styling */
+    .k-notification {
+        border-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        padding: 10px 15px;
+    }
+    
+
+</style>
+
+<script>
+    $(document).ready(function () {
+        // Initialize Kendo Notification
+        var notification = $("#notification").kendoNotification({
+            position: {
+                pinned: true,
+                top: 30,
+                right: 30
+            },
+            autoHideAfter: 3000,
+            stacking: "down",
+            templates: [
+                {
+                    type: "success",
+                    template: "<div class='k-notification k-notification-success'><span class='k-icon k-i-check'></span> #= message #</div>"
+                },
+                {
+                    type: "error",
+                    template: "<div class='k-notification k-notification-error'><span class='k-icon k-i-warning'></span> #= message #</div>"
+                }
+            ]
+        }).data("kendoNotification");
+
+        $("#loginForm").kendoForm({
+            orientation: "vertical",
+            items: [
+                { 
+                    field: "Email", 
+                    label: "Email",
+                    editor: "TextBox",
+                    editorOptions: {
+                        placeholder: "Enter your email"
+                    }
+                },
+                { 
+                    field: "Password", 
+                    label: "Password",
+                    editor: "TextBox",
+                    editorOptions: {
+                        type: "password",
+                        placeholder: "Enter your password"
+                    }
+                }
+            ],
+            buttonsTemplate: `<button type="submit" class="btn btn-primary">Login</button>`,
+            submit: function (e) {
+                e.preventDefault();
+                console.log(e.model);
+
+                let EmailLowerCase = e.model.Email.toLowerCase();
+                const LoginData = new FormData();
+                LoginData.append("Email", EmailLowerCase);
+                LoginData.append("Password", e.model.Password);
+
+                $.ajax({
+                    url: "http://localhost:5111/api/userApi/login",
+                    type: "POST",
+                    data: LoginData,
+                    contentType: false,
+                    processData: false,
+                    success: function (response) {
+                        localStorage.setItem("authToken", response.token);
+
+                        // Decode role from token
+                        const role = getUserRoleFromToken();
+                        if (role) {
+                            localStorage.setItem("userRole", role);
+                        }
+
+                        notification.show({ message: "Login successful!" }, "success");
+
+                        redirectToDashboard(role);
+                    },
+                    error: function (xhr, status, error) {
+                        console.error("Login failed:", xhr.responseText);
+                        let errorMessage = "Invalid login credentials!";
+
+                        if (xhr.status === 400 || xhr.status === 401) {
+                            let responseJson = JSON.parse(xhr.responseText);
+                            errorMessage = responseJson.message;
+                        }
+
+                        notification.show({ message: errorMessage }, "error");
+                    }
+                });
+            }
+        });
+
+        function getUserRoleFromToken() {
+            const token = localStorage.getItem("authToken");
+            console.log("Token:", token);
+            if (!token) return null;
+
+            // Decode JWT (Base64 decoding)
+            const payload = JSON.parse(atob(token.split(".")[1]));
+
+            return payload.role || payload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
+        }
+
+        function redirectToDashboard(role) {
+            console.log(role)
+            switch (role) {
+                case "admin":
+                    window.location.href = "/Admin";
+                    break;
+                case "teacher":
+                    window.location.href = "/Teacher";
+                    break;
+                case "student":
+                    window.location.href = "/Student";
+                    break;
+                default:
+                    window.location.href = "/";
+                    break;
+            }
+        }
+    });
+</script>

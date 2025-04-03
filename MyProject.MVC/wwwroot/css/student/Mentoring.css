@@ -1,0 +1,91 @@
+.teacher-card {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.teacher-header {
+    background: linear-gradient(135deg, #2c3e50 0%, #2c3e50 100%);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    padding: 20px;
+    margin-bottom: 0;
+}
+
+.teacher-title {
+    font-weight: 600;
+    margin: 0;
+}
+
+.teacher-image-container {
+    padding: 20px 0;
+    position: relative;
+}
+
+.teacher-image {
+    width: 150px;
+    height: 150px;
+    border: 5px solid white;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.teacher-image:hover {
+    transform: scale(1.05);
+}
+
+.teacher-info {
+    padding: 15px;
+}
+
+.info-row {
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    font-weight: 600;
+    width: 40%;
+    color: #495057;
+}
+
+.info-value {
+    width: 60%;
+    color: #212529;
+}
+
+@media (max-width: 768px) {
+    .teacher-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .info-row {
+        flex-direction: column;
+    }
+    
+    .info-label, .info-value {
+        width: 100%;
+    }
+}
+
+.animate-fade {
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

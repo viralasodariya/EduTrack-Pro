@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ✅ Bootstrap & Site Styles -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MyProject.MVC.styles.css" asp-append-version="true" />
+    
+    <!-- ✅ Modern UI Additions -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- ✅ Local Kendo UI CSS -->
+    <link rel="stylesheet" href="~/lib/kendo/kendo.default-v2.min.css" asp-append-version="true" />
+    
+    <!-- Admin Styles -->
+    <link rel="stylesheet" href="~/css/admin/admin-styles.css" asp-append-version="true" />
+</head>
+<body>
+
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark admin-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <i class="bi bi-layers me-2"></i>Admin Portal
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-person-circle me-1"></i> Admin
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" id="logOutBtn" href="#"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="d-flex">
+        <!-- Sidebar -->
+        <div class="admin-sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Admin" asp-action="Index">
+                        <i class="bi bi-house-door"></i>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Admin" asp-action="Student">
+                        <i class="bi bi-mortarboard"></i>
+                        <span class="nav-text">Students</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Admin" asp-action="Class">
+                        <i class="bi bi-book"></i>
+                        <span class="nav-text">Classes</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Admin" asp-action="Subject">
+                        <i class="bi bi-journal-text"></i>
+                        <span class="nav-text">Subjects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Admin" asp-action="Notification">
+                        <i class="bi bi-bell"></i>
+                        <span class="nav-text">Notifications</span>
+                        <span class="badge bg-danger notification-badge" id="notificationCount"></span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Admin" asp-action="Progress">
+                        <i class="bi bi-graph-up"></i>
+                        <span class="nav-text">Progress</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Admin" asp-action="TimeTable">
+                        <i class="bi bi-calendar3"></i>
+                        <span class="nav-text">Time Table</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="content-wrapper">
+            <div class="admin-content">
+                <main role="main" class="pb-4">
+                    <div class="container-fluid px-4">
+                        @RenderBody()
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ Local jQuery -->
+    <script src="~/lib/jquery/dist/jquery.min.js" asp-append-version="true"></script>
+
+    <!-- ✅ Kendo UI JavaScript (Load After jQuery) -->
+    <script src="~/lib/kendo/kendo.all.min.js" asp-append-version="true"></script>
+
+     <!-- ✅ Bootstrap Scripts -->
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- ✅ Site Scripts -->
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        checkAdminAccess();
+        function checkAdminAccess() {
+        const token = localStorage.getItem('authToken');
+        const role = localStorage.getItem('userRole');
+            if (!token || role != "admin") {
+                window.location.href = "/Account/Login";
+            }
+        }
+       loadUnreadNotifications();
+        function loadUnreadNotifications() {
+            $.ajax({
+                url: "http://localhost:5111/api/AdminApi/dashboard/GetUnreadNotifications",
+                type: "GET",
+                dataType: "json",
+                headers: { "Authorization": "Bearer " + localStorage.getItem("authToken") },
+                success: function (response) { 
+                    response.notifications.length > 0 ? $("#notificationCount").text(response.notifications.length) : $("#notificationCount").text("0"); 
+                }
+            });     
+        }
+
+        $("#logOutBtn").click(function () {
+            localStorage.removeItem("authToken");
+            localStorage.removeItem("userRole");
+            window.location.href = "/Account/Login";
+        });
+        
+    </script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

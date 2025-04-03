@@ -1,0 +1,23 @@
+@{
+    Layout = "~/Views/Shared/_Layout_Teacher.cshtml";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-10 col-lg-8">
+            <div class="card profile-card shadow">
+                <div class="card-header bg-primary text-white">
+                    <h3 class="card-title mb-0">Edit Profile</h3>
+                </div>
+                <div class="card-body">
+                    <div id="teacherProfileForm" class="teacher-form"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/teacher/EditProfile.css" asp-append-version="true" />
+    <script src="~/js/teacher/EditProfile.js" asp-append-version="true"></script>
+}

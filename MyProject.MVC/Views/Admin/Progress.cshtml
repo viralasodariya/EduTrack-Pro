@@ -1,0 +1,102 @@
+@{
+    ViewData["Title"] = "Assignment Progress";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<div class="progress-dashboard container-fluid">
+    <div class="dashboard-header-container row mb-4">
+        <div class="dashboard-header col-12">
+            <div class="header-title">
+                <h3 class="mb-3"><i class="fas fa-chart-pie me-2"></i>Teacher Assignment Progress</h3>
+            </div>
+            <div class="header-content">
+                <div class="header-description">
+                    <p class="text-muted">Track and analyze teacher performance across different subjects and assignments.</p>
+                </div>
+                <div class="header-actions">
+                    <button id="refreshData" class="btn btn-primary"><i class="fas fa-sync-alt me-2"></i>Refresh Data</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content row">
+        <div class="sidebar col-12 col-md-4 col-lg-3 mb-4">
+            <div class="filter-card card mb-4">
+                <div class="card-header">
+                    <h4 class="mb-0">Filters</h4>
+                </div>
+                <div class="card-body">
+                    <div class="filter-group mb-3">
+                        <label for="teacherFilter" class="form-label">Teacher</label>
+                        <select id="teacherFilter" class="form-select">
+                            <option value="all">All Teachers</option>
+                        </select>
+                    </div>
+                    <div class="filter-group mb-3">
+                        <label for="subjectFilter" class="form-label">Subject</label>
+                        <select id="subjectFilter" class="form-select">
+                            <option value="all">All Subjects</option>
+                        </select>
+                    </div>
+                    <button id="applyFilters" class="btn btn-primary w-100">Apply Filters</button>
+                </div>
+            </div>
+
+            <div class="summary-card card">
+                <div class="card-header">
+                    <h4 class="mb-0">Summary</h4>
+                </div>
+                <div class="card-body">
+                    <div id="progressSummary" class="summary-stats row">
+                        <div class="progress-stat col-12 mb-3">
+                            <span class="text-muted">Average Completion</span>
+                            <h3 id="avgCompletion" class="mb-0">0%</h3>
+                        </div>
+                        <div class="progress-stat col-12 mb-3">
+                            <span class="text-muted">Highest Progress</span>
+                            <h3 id="highestProgress" class="mb-0">0%</h3>
+                        </div>
+                        <div class="progress-stat col-12">
+                            <span class="text-muted">Lowest Progress</span>
+                            <h3 id="lowestProgress" class="mb-0">0%</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-panel col-12 col-md-8 col-lg-9">
+            <div class="chart-card card mb-4">
+                <div class="card-header m-4 p-4">
+                    <h4 class="mb-0 pb-4">Progress Distribution</h4>
+                    <div class="chart-controls btn-group">
+                        <button id="showDonut" class="btn btn-outline-primary active">Donut</button>
+                        <button id="showBar" class="btn btn-outline-primary">Bar</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div id="progressChart" class="chart-container"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="details-section row">
+        <div class="col-12">
+            <div class="details-card card">
+                <div class="card-header">
+                    <h4 class="mb-0">Detailed Progress</h4>
+                </div>
+                <div class="card-body">
+                    <div id="progressGrid" class="table-responsive"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <link rel="stylesheet" href="~/css/admin/Progress.css" asp-append-version="true" />
+    <script src="~/js/admin/Progress.js" asp-append-version="true"></script>
+}
